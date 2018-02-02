@@ -1,0 +1,11 @@
+body{
+	margin: 0;
+	padding: 0;
+	background-color: #dcf2ff;
+}
+div.two-thirds{
+	margin: 0 auto;
+	margin-top: 10%;
+	width: 300px;
+	background-color:#ffe7c2;
+}

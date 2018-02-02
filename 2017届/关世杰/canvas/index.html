@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title>canvas</title>
+	</head>
+
+	<body>
+
+		<canvas id="Canvas" style="width: 800px;height: 500px;"> </canvas>
+
+		<script type="text/javascript">
+			var canvas = document.getElementById('Canvas');
+			var ctx = canvas.getContext('2d');
+			ctx.fillStyle = '#24acff';
+			ctx.fillRect(0, 0, 800, 500);
+			var c = document.getElementById("Canvas");
+			var ct = c.getContext("2d");
+			ct.font = "50px Arial ";
+			ct.strokeText("Canvas实例", 10, 50);
+			var b = document.getElementById("Canvas");
+			var ctxa = b.getContext("2d");
+
+			// 创建渐变
+			var grd = ctxa.createLinearGradient(0, 0, 300,0);
+			grd.addColorStop(0, "red");
+			grd.addColorStop(1, "white");
+
+			// 填充渐变
+			ctxa.fillStyle = grd;
+			ctxa.fillRect(10, 60, 150, 50)
+		</script>
+	</body>
+
+</html>
