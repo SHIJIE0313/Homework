@@ -1,0 +1,22 @@
+*{
+	padding: 0;
+	margin: 0;
+	font-family: "微软雅黑";
+}
+h1{
+	text-align: center;
+	color: #000000;
+	-webkit-mask-image: -webkit-gradient(linear, 0 0, 0 bottom, from(rgba(0, 0, 255, 0)), to(#ff0000));
+
+}
+div.form-group{
+	width: 15%;
+	display: inline-block;
+	margin-left: 2%;
+	margin-top: 10px;
+}
+table.sql{
+	margin-top: 10px;
+	margin-left: 2%;
+}
+

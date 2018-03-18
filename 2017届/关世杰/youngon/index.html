@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>初试面试表</title>
+		<link rel="stylesheet" href="css/new_file.css" />
+	</head>
+
+	<body>
+		<div class="CHUNZHAO">
+			<h1>初试面试表</h1>
+			<hr style="margin-top: 20px;">
+			<div class="CHUSHI" id="app">
+				<div class="FORM">
+					<div class="form-group">
+						<label class="name">姓名：</label>
+						<div class="name">
+							<input type="text" class="name" v-model="newPerson.name" />
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="department">部门：</label>
+						<div class="department">
+							<select class="form-control" v-model="newPerson.department">
+								<option value="开发部">开发部</option>
+								<option value="企划部">企划部</option>
+								<option value="信息部">信息部</option>
+								<option value="运营部">运营部</option>
+							</select>
+
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="suggestion">面试官意见：</label>
+						<div class="suggestion">
+							<input type="text" class="form-control" v-model="newPerson.suggestion">
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="score">分数：</label>
+						<div class="score">
+							<input type="text" class="form-control" v-model="newPerson.score">
+						</div>
+					</div>
+					<div class="form-group">
+						<label for=""></label>
+						<button class="col-md-offset-2" @click="createPerson">加入列表</button>
+					</div>
+				</div>
+				<hr style="margin-top: 25px;">
+				<div class="sql">
+					<table class="sql">
+						<thead>
+							<tr>
+								<th class="text-center" style="margin-left: 10%;">姓名</th>
+								<th class="text-center" style="margin-left: 10%;">部门</th>
+								<th class="text-center" style="margin-left: 10%;">评分</th>
+								<th class="text-center" style="margin-left: 100px;">面试官意见</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr v-for="person in people">
+								<td>{{ person.name }}</td>
+								<td>{{ person.department }}</td>
+								<td>{{ person.score }}</td>
+								<td>{{ person.suggestion }}</td>
+								<td><button @click="deletePerson($index)">删除</button></td>
+								<!--
+                                                          这为啥不能用v-on
+                                -->
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+	</body>
+	<script src="js/vue.js"></script>
+	<script>
+		var vm = new Vue({
+			el: '#app',
+			data: {
+				newPerson: {
+					name: '',
+					age: '',
+					score: '',
+					suggestion: ''
+				},
+				people: [{
+					name: '关世杰',
+					department: '开发部',
+					score: '7.5',
+					suggestion: '无'
+				}, ]
+			},
+			methods: {
+				createPerson: function() {
+					this.people.push(this.newPerson);
+					this.newPerson = {
+						name: '',
+						department: '',
+						score: '',
+						suggestion: ''
+					}
+				},
+				deletePerson: function(index) {
+					this.people.splice(index, 1);
+				}
+			}
+		})
+	</script>
+
+</html>
