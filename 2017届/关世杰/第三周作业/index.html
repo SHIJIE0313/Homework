@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title>8个js demo</title>
+	</head>
+
+	<body>
+		<script>
+			var entry = prompt("请输入你想选的实例1~8");
+			var phonenum;
+			var a, b;
+			var guessnum;
+			var truenum;
+			var c, d;
+			var e, f;
+
+			function h() {
+				var sum = 0,
+					len = arguments.length,
+					g;
+				for(g = 0; g < len; g++) {
+					sum += arguments[g];
+				}
+				return sum / len
+			}
+			var i, j;
+
+			if(entry == 1) {
+				phonenum = prompt("判断手机号码是否正确（是否为纯数字，是否是11位）请键入手机号：");
+				if(isNaN(phonenum)) {
+					alert("你输入的号码不是纯数字");
+				} else if(phonenum.length != 11) {
+					alert("你输入的号码有误");
+				} else(
+					document.write("验证成功，你的手机号是" + phonenum)
+				)
+			} else if(entry == 2) {
+				alert("本demo将输出99乘法表");
+				for(a = 1; a <= 9; a++) {
+					for(b = 1; b <= a; b++) {
+						document.write(b + "*" + a + "=" + a * b + "&nbsp&nbsp&nbsp");
+					}
+					document.write("</br>");
+				}
+			} else if(entry == 3) {
+				alert("本demo为猜数游戏");
+				truenum = 5;
+				guessnum = prompt("请输入你猜的数字");
+				if(isNaN(guessnum)) {
+					alert("请输入数字");
+					// 这想写如果不是数字就重新输入 但是没能实现
+				}
+				while(guessnum > truenum) {
+					alert("猜大了");
+					guessnum = prompt("请输入你猜的数字");
+				}
+				while(guessnum < truenum) {
+					alert("猜小了");
+					guessnum = prompt("请输入你猜的数字");
+				}
+				while(guessnum = truenum) {
+					alert("猜对了");
+					break;
+				}
+
+			} else if(entry == 4) {
+				alert("本demo将通过while循环求100内数字的和");
+				c = 1;
+				d = 0;
+				while(c <= 100) {
+					d += c;
+					c++;
+				}
+				document.write(d);
+
+			} else if(entry == 5) {
+				alert("本demo计算100以内3及3倍数的和，用continue除去33,66，99");
+				f = 0;
+				for(e = 3; e <= 100; e += 3) {
+					if(e == 33 || e == 66 || e == 99) {
+						continue;
+					}
+					f += e;
+				}
+				document.write(f);
+			} else if(entry == 6) {
+				alert("求平均数");
+				var avg = h(10, 8, 99, 5, 34, 222);
+				document.write(parseFloat(avg));
+			} else if(entry == 7) {
+				alert("数据的保存");
+				var num = [];
+				while(j != 0) {
+					j = prompt("检测保存权限,输入0停止保存，输出结果");
+					if(j == 0) {
+						break;
+					}
+					i = prompt("键入要保存的数");
+					num.push(i);
+				}
+				document.write(num);
+			} else if(entry == 8) {
+				alert("排序");
+				var str = [];
+				var shuru;
+				while(shuru != '退出') {
+					var shuru = prompt('输入你想排序的数字，输入退出开始排序');
+					if(shuru == '退出') {
+						break;
+					}
+					str.push(shuru);
+				}
+				str.sort(function(x, y) {
+					return x - y
+				});
+				document.write("升序:"+str);
+				document.write("</br>")
+				str.sort(function(x, y) {
+					return y - x
+				});
+				document.write("降序"+str);
+
+			}else{
+				alert("你输入的数字有误，请检查后刷新页面重新输入。")
+			}
+			document.write("</br>"+"</br>"+"</br>"+"上周了解完vue.js以后，发现自己的js基础还有欠缺，所以这周复习了js语法，语句，函数，及部分内置对象。写了几个demo")
+		</script>
+	</body>
+
+</html>
