@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title>dom1</title>
+	</head>
+
+	<body>
+		<!--
+
+
+    <h3>前端书籍</h3>
+    <ul id="listWeb">
+		<li>htmll基础</li>
+		<li>CSS基础</li>
+		<li>JavaScript基础</li>
+		<li>Jquery框架</li>
+		<li>bootStrap框架</li>
+	</ul>
+	<h3>JAVA书籍</h3>
+	<ul id="listJava">
+		<li>JAVA语言基础</li>
+		<li>三大框架</li>
+		<li>JAVA深入浅出</li>
+	</ul>
+</body>
+<script>
+	var a=document.getElementById("listWeb").getElementsByTagName("li");
+	for(var i=0;i<a.length;i++){
+		document.write("这是第"+(i+1)+"本书："+a[i]+"</br>");
+	}
+	document.write("共"+i+"本书");
+	
+</script>
+    -->
+		<!--
+
+
+		<div>第一个元素</div>
+		<div>第二个元素</div>
+		<div>第三个元素</div>
+		<script>
+			var a=document.getElementsByTagName("div");
+			for(var i=0;i<a.length;i++){
+				alert(a[i]);
+			}
+		</script>
+		-->
+
+		<!--<h1>前端开发知识点</h1>
+		<ul>
+			<li>js</li>
+			<li>css</li>
+			<li>html</li>
+			<li>css3</li>
+			<li>html5</li>
+			<li>jquery</li>
+			<li>bootstrap</li>
+			<li>webapp</li>
+
+		</ul>
+		<script>
+			var a=document.getElementsByTagName("li");
+			for(var i=0;i<a.length;i++){
+				if((i%2)==0){
+					a[i].style.backgroundColor="yellow";
+				}
+			}
+		</script>-->
+		<!--<style>
+			#purple {
+				color: purple;
+			}
+			
+			#yellow {
+				color: lightyellow;
+			}
+			
+			.pink {
+				background-color: pink;
+			}
+			
+			.orange {
+				background-color: orange;
+			}
+		</style>
+	
+
+		<body>
+			<h2>网络游戏排名</h2>
+			<ul>
+				<li>英雄联盟</li>
+				<li>魔兽世界</li>
+				<li>DOTA</li>
+				<li>仙剑奇侠传</li>
+				<li>穿越火线</li>
+				<li>梦幻西游</li>
+			</ul>
+			<script>
+				var a = document.getElementsByTagName("li");
+				for(var i = 0; i < a.length; i++) {
+					if((i % 2) == 0) {
+						a[i].setAttribute("id", "purple");
+						a[i].setAttribute("class", "pink");
+					} else if((i % 2) > 0) {
+						a[i].setAttribute("id", "yellow");
+						a[i].setAttribute("class", "orange");
+					}
+				}
+			</script>
+		</body>-->
+		<!--<style>
+			.p1 {
+				background-color: pink;
+			}
+			
+			#p1 {
+				color: green;
+			}
+			
+			#p2 {
+				color: orange;
+			}
+			
+			#p3 {
+				color: blue;
+			}
+		</style>
+
+		<body>
+			<p class="p1" id="p1">
+				一个人的快乐，不是因为他拥有的多，而是因为他计较的少。
+			</p>
+			<p class="p1" id="p2">
+				静坐常思己过，闲谈莫论人非，能受苦乃为志士，肯吃亏不是痴人，敬君子方显有德，怕小人不算无能，退一步天高地阔，让三分心平气和，欲进步需思退步，若着手先虑放手，如得意不宜重往，凡做事应有余步。
+			</p>
+			<p class="p1" id="p3">
+				持黄金为珍贵，知安乐方值千金，事临头三思为妙，怒上心忍让最高。切勿贪意外之财，知足者人心常乐。若能以此去处事，一生安乐任逍遥。
+			</p>
+			<script>
+				var a = document.getElementsByTagName("p");
+				for(var i = 0; i < a.length; i++) {
+					a[i].removeAttribute("class");
+					a[i].removeAttribute("id");
+
+				}
+			</script>
+		</body>-->
+		
+
+</html>
