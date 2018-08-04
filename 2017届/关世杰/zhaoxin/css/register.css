@@ -1,0 +1,45 @@
+* {
+	padding: 0;
+	margin: 0;
+}
+
+.head {
+	width: 800px;
+	height: 50px;
+	margin: 0 auto;
+}
+
+h1 {
+	text-align: center;
+	line-height: 50px;
+}
+
+.body {
+	padding-top: 50px;
+	width: 800px;
+	height: 400px;
+	margin: 0 auto;
+	text-align: center;
+}
+
+h3 {
+	display: inline;
+}
+
+input {
+	width: 150px;
+	height: 25px;
+	border: 1px solid;
+	margin-left: 5px;
+	margin-top: 5px;
+}
+
+button {
+	width: 100px;
+	height: 30px;
+	margin: 0 auto;
+	background-color: #6495ED;
+	border: none;
+	color: white;
+	margin-top: 20px;
+}

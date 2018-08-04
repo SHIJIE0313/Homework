@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<!--
+	报名表核心页面
+-->
+	<head>
+		<meta charset="utf-8" />
+		<title>面试报名</title>
+		<link rel="stylesheet" href="css/sing_up.css" />
+		<!--		<script type="text/javascript" src="js/sing_up.js"></script>
+-->
+	</head>
+
+	<body>
+		<div id="BaoMing">
+			<h1>面试报名表</h1>
+			<div id="zhengwen">
+				<form action="new_file.php" method="post">
+					<p>姓名<span id="s1"></span></p>
+					<input id="Name" type="text" name="name" />
+					<hr>
+					<p>性别<span id="s2"></span></p>
+					<input id="sex" type="text" name="sex" />
+					<hr>
+					<p>籍贯<span id="s3"></span></p>
+					<select id="province" name="province" runat="server" onchange="selectprovince(this);" style=" width:95px; "></select>
+					<select id="city" name="city" runat="server" style=" width:95px;"></select>
+					<script type="text/javascript" src="js/city.js"></script>
+					<hr>
+					<p>电话<span id="s4"></span></p>
+					<input id="tel" type="text" name="phone" />
+					<hr>
+					<p>学院<span id="s5"></span></p>
+					<select id="choose1" name="select">
+						<option value="none">请选择</option>
+						<option value="艺术学院">艺术学院</option>
+						<option value="信息工程学院">信息工程学院</option>
+						<option value="管理学院">管理学院</option>
+						<option value="经济学院">经济学院</option>
+						<option value="机械工程学院">机械工程学院</option>
+						<option value="生食学院">生食学院</option>
+						<option value="法学院">法学院</option>
+						<option value="公管学院">公管学院</option>
+						<option value="理学院">理学院</option>
+						<option value="FIU">FIU</option>
+						<option value="会计学院">会计学院</option>
+						<option value="马克思学院">马克思学院</option>
+						<option value="外国语学院">外国语学院</option>
+					</select>
+					<hr>
+					<p>学号<span id="s6"></span></p>
+					<input id="idnum" type="text" name="idnum" />
+					<hr>
+					<p>邮箱(格式：xxx@xx.com)<span id="s7"></span></p>
+					<input type="text" name="mail" />
+					<hr>
+					<span id="ss1">第一意向部门</span>
+					<select id="choose1" name="select1">
+						<option value="none">请选择</option>
+						<option value="企划部">企划部</option>
+						<option value="开发部">开发部</option>
+						<option value="信息部">信息部</option>
+						<option value="运营部">运营部</option>
+					</select><span id="s7"></span>
+					<span id="ss2">第二意向部门</span>
+					<select id="choose2" name="select2">
+						<option value="none">请选择</option>
+						<option value="企划部">企划部</option>
+						<option value="开发部">开发部</option>
+						<option value="信息部">信息部</option>
+						<option value="运营部">运营部</option>
+					</select>
+					<hr style="margin-top: 35px;">
+					<p>至少选出一项你擅长的技术</p>
+					<input type="checkbox" id="FuXuan1" name="skill[]" value="HTML5" />HTML5
+					<input type="checkbox" id="FuXuan2" name="skill[]" value="CSS3" />CSS3
+					<input type="checkbox" id="FuXuan3" name="skill[]" value="JavaScript" />JavaScript
+					<input type="checkbox" id="FuXuan4" name="skill[]" value="PHP" />PHP
+					<input type="checkbox" id="FuXuan5" name="skill[]" value="Python" />Python
+					<hr>
+					<p>你为什么加入阳光网站，你觉得阳光网站是一个怎样的社团？<span id="s8"></span></p>
+					<textarea id="area1" rows="5" cols="25" name="suggest"></textarea>
+					<hr>
+					<span id="ss3">请选择你的面试时间</span>
+					<select id="choose3" name="select3">
+						<option>请选择</option>
+						<option>8:00-12:00</option>
+						<option>14:00-18:00</option>
+					</select>
+					<button id="put" type="submit">Join Us</button>
+				</form>
+			</div>
+		</div>
+	</body>
+
+</html>

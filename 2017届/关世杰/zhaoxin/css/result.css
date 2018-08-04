@@ -1,0 +1,20 @@
+#result {
+	height: 50%;
+	width: 50%;
+	margin: 5% auto;
+	align-items: center;
+	border:groove;
+	border-color: salmon;
+}
+
+h1 {
+	text-align: center;
+}
+
+h2 {
+	text-align: center;
+	color: red;
+}
+p{
+	display: inline;
+}

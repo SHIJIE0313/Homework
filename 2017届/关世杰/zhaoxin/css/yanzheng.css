@@ -1,0 +1,31 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+.middle{
+	width: 700px;
+	height: 300px;
+	margin: 5% auto;
+	background-color:paleturquoise;
+}
+.middles{
+	width: 400px;
+	height: 150px;
+	margin:0 auto;
+	padding-top: 100px;
+	text-align: center;
+}
+.input1,.input2{
+	
+}
+
+#put {
+	margin-top: 30px;
+	width: 80px;
+	height: 40px;
+	border: none;
+	background-color:lightsalmon;
+	color: white;
+	font-size: 22px;
+	border-radius: 50px;
+}
